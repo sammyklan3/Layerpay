@@ -18,7 +18,6 @@ export function useAuth() {
 
   const handleLogin = useCallback(async (email: string, password: string) => {
     const res = await login(email, password);
-    console.log(res.user);
     setAuth({ user: res.user, accessToken: res.accessToken });
   }, []);
 
